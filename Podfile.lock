@@ -1,0 +1,16 @@
+PODS:
+  - SCICoreTools (0.1.0)
+
+DEPENDENCIES:
+  - SCICoreTools (from `.`)
+
+EXTERNAL SOURCES:
+  SCICoreTools:
+    :path: "."
+
+SPEC CHECKSUMS:
+  SCICoreTools: dd224233aeac069e6a686b5edea785fef0a2fb6a
+
+PODFILE CHECKSUM: c5486f28a52e3a87b9ee5a557e8128b39404524d
+
+COCOAPODS: 1.5.3
