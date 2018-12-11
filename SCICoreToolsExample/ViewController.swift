@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         let text = " "
         print(text.isBlank)
         print(90.degreesToRadians)
-        let vc = loadControllerFromStoryboard(name: "Main", withIdentifier: "ViewController") as? ViewController
+        let vc = SCICoreTools.loadControllerFromStoryboard(name: "Main", withIdentifier: "ViewController") as? ViewController
         if let _:ViewController = vc {
             print("true")
         }
@@ -31,6 +31,10 @@ class ViewController: UIViewController {
         let textField = UITextField()
         textField.text = " "
         print(textField.isEmpty)
+
+        print("******")
+        print("\(SCICoreTools.appName!)-native-\(SCICoreTools.deviceModel)")
+
     }
 
 

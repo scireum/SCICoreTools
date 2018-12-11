@@ -19,6 +19,22 @@ public extension String {
     }
 
     /**
+     First character of a string.
+     */
+    var firstCharacterAsString: String? {
+        guard let first = first else { return nil }
+        return String(first)
+    }
+
+    /**
+     Last character of a string.
+     */
+    var lastCharacterAsString: String? {
+        guard let last = last else { return nil }
+        return String(last)
+    }
+
+    /**
      Check if string is valid email format.
      - Note: Note that this property does not validate the email address against an email server.
      */
@@ -59,6 +75,5 @@ public extension String {
     var dateFromISO8601: Date? {
         return Formatter.iso8601.date(from: self)
     }
-
-
+    
 }
