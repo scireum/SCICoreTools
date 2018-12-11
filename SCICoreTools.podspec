@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'SCICoreTools'
-s.version      = '0.1.0'
+s.version      = '1.0.0'
 s.summary      = 'SCICoreTools'
 s.description  = <<-DESC
 SCICoreTools
