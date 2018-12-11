@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         print(textField.isEmpty)
 
         print("******")
-        print("\(SCICoreTools.appName!)-native-\(SCICoreTools.deviceModel)")
+        print("\(SCICoreTools.appName!) native \(SCICoreTools.deviceModel)".chainWithDashes())
 
     }
 

@@ -39,6 +39,11 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertTrue("http://google.com".isValidHttpUrl)
     }
 
+    func testChainWithDashes() {
+        XCTAssertEqual("Test tEsT tEst".chainWithDashes(), "test-test-test")
+        XCTAssertEqual("TeSt-tEsT TEST".chainWithDashes(), "test-test-test")
+    }
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

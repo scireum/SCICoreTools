@@ -75,5 +75,31 @@ public extension String {
     var dateFromISO8601: Date? {
         return Formatter.iso8601.date(from: self)
     }
-    
+
+    /**
+     Transforms the string into a chained dash string.
+     - Returns: chained dash string
+     */
+    func chainWithDashes() -> String {
+        let lowercased = self.lowercased()
+        let withDashes = lowercased.replacingOccurrences(of: " ", with: "-")
+
+        let alphanumerics = NSCharacterSet.alphanumerics
+        var filtered = withDashes.filter {
+            guard String($0) != "-" else { return true }
+            guard String($0) != "&" else { return true }
+            return String($0).rangeOfCharacter(from: alphanumerics) != nil
+        }
+
+        while filtered.lastCharacterAsString == "-" {
+            filtered = String(filtered.dropLast())
+        }
+
+        while filtered.firstCharacterAsString == "-" {
+            filtered = String(filtered.dropFirst())
+        }
+
+        return filtered.replacingOccurrences(of: "--", with: "-")
+    }
+
 }
