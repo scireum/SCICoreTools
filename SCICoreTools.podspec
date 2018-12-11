@@ -3,7 +3,7 @@ s.name         = 'SCICoreTools'
 s.version      = '0.1.0'
 s.summary      = 'SCICoreTools'
 s.description  = <<-DESC
-Barcode scanner
+SCICoreTools
 DESC
 s.homepage     = 'https://github.com/scireum/SCICoreTools'
 s.license      = { :type => 'MIT' }
