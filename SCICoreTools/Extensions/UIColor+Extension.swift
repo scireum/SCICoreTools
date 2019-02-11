@@ -14,4 +14,17 @@ public extension UIColor {
             blue: rgb & 0xFF
         )
     }
+
+    /**
+     Initializes a UIColor from a HEX string.
+     */
+    convenience init(hex: String) {
+        var rgbValue: UInt32 = 0
+        let scanner = Scanner(string: hex)
+        if hex.first == "#" {
+            scanner.scanLocation = 1
+        }
+        scanner.scanHexInt32(&rgbValue)
+        self.init(red: CGFloat((rgbValue >> 16) & 0xFF)/255, green: CGFloat((rgbValue >> 8) & 0xFF)/255, blue: CGFloat(rgbValue &  0xFF)/255, alpha: 1.0)
+    }
 }
