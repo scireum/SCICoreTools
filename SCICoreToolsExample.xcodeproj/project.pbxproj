@@ -267,7 +267,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SCICoreToolsExample/Pods-SCICoreToolsExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SCICoreToolsExample/Pods-SCICoreToolsExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SCICoreTools/SCICoreTools.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -278,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCICoreToolsExample/Pods-SCICoreToolsExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SCICoreToolsExample/Pods-SCICoreToolsExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A164C6E5357A31A64D30EAC6 /* [CP] Check Pods Manifest.lock */ = {
