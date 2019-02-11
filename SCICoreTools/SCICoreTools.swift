@@ -211,14 +211,6 @@ public struct SCICoreTools {
     }
 
     /**
-     Check if current device is ipad and have no homebutton
-     - Returns: Boolvalue
-     */
-    public var isIpadProWithoutHomebutton: Bool {
-        return SCICoreTools.isPad && (SCICoreTools.screen == .inches_11_0 || SCICoreTools.screen == .inches_12_9)
-    }
-
-    /**
      Get the screensize of current device
      - Returns: CGFloatvalue
      */
