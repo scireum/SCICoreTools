@@ -103,3 +103,14 @@ public extension String {
     }
 
 }
+
+public extension String {
+    public func hasOneOfPrefixes(_ prefixes: [String]) -> Bool {
+        for prefix in prefixes {
+            if self.hasPrefix(prefix) {
+                return true
+            }
+        }
+        return false
+    }
+}
