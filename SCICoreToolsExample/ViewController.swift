@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         print("******")
         print("\(SCICoreTools.appName!) native \(SCICoreTools.deviceModel)".chainWithDashes())
         print(UIDevice.current.modelName)
+        Log.debug(message: "test")
     }
 
 
