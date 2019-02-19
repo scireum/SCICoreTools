@@ -35,7 +35,14 @@ class ViewController: UIViewController {
         print("******")
         print("\(SCICoreTools.appName!) native \(SCICoreTools.deviceModel)".chainWithDashes())
         print(UIDevice.current.modelName)
-        Log.debug(message: "test")
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showSimpleInfo(title: "test", message: "actionSheet") {
+            print("completion")
+        }
     }
 
 

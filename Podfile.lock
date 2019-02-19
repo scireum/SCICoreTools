@@ -1,5 +1,5 @@
 PODS:
-  - SCICoreTools (1.7.0)
+  - SCICoreTools (1.8.0)
 
 DEPENDENCIES:
   - SCICoreTools (from `.`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  SCICoreTools: f9660a85a20578232314164ace0c3a3344765fd0
+  SCICoreTools: 94a580f70f0a9e56921124497661ae9f2fff3c94
 
 PODFILE CHECKSUM: c5486f28a52e3a87b9ee5a557e8128b39404524d
 
