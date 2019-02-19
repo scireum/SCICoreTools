@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showSimpleInfo(title: "test", message: "actionSheet") {
+        showSimpleActionSheet(title: "test", message: "actionSheet") {
             print("completion")
         }
     }
