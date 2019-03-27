@@ -4,7 +4,7 @@ import ImageIO
 // Source: https://stackoverflow.com/questions/27919620/how-to-load-gif-image-in-swift
 public extension UIImage {
 
-    public class func gifImageWithData(data: NSData) -> UIImage? {
+    class func gifImageWithData(data: NSData) -> UIImage? {
         guard let source = CGImageSourceCreateWithData(data, nil) else {
             // Image doesn't exist
             return nil
@@ -13,7 +13,7 @@ public extension UIImage {
         return UIImage.animatedImageWithSource(source: source)
     }
 
-    public class func gifImageWithURL(gifUrl:String) -> UIImage? {
+    class func gifImageWithURL(gifUrl:String) -> UIImage? {
         guard let bundleURL = NSURL(string: gifUrl)
             else {
                 // Image doesn't exist
@@ -27,7 +27,7 @@ public extension UIImage {
         return gifImageWithData(data: imageData)
     }
 
-    public class func gifImageWithName(name: String) -> UIImage? {
+    class func gifImageWithName(name: String) -> UIImage? {
         guard let bundleURL = Bundle.main
             .url(forResource: name, withExtension: "gif") else {
                 // This image does not exists in the resource folder
@@ -157,7 +157,7 @@ public extension UIImage {
     /**
      Returns a rotated image so that the imageOrientation is UIImageOrientation.up
      */
-    public func normalized() -> UIImage {
+    func normalized() -> UIImage {
         if (imageOrientation == .up) {
             return self
         }
@@ -177,7 +177,7 @@ public extension UIImage {
     /**
      Scales an UIImage to the given size.
      */
-    public func scaled(toSize newSize: CGSize) -> UIImage {
+    func scaled(toSize newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
         self.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: newSize.width, height: newSize.height)))
         let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
@@ -188,7 +188,7 @@ public extension UIImage {
     /**
      Scales an UIImage to the given width keeping the aspect ratio.
      */
-    public func scaledKeepingAspect(toWidth newWidth: CGFloat) -> UIImage {
+    func scaledKeepingAspect(toWidth newWidth: CGFloat) -> UIImage {
         let newHeight = size.height*newWidth/size.width
         return scaled(toSize: CGSize(width: newWidth, height: newHeight))
     }
@@ -196,7 +196,7 @@ public extension UIImage {
     /**
      Scales an UIImage to the given height keeping the aspect ratio.
      */
-    public func scaledKeepingAspect(toHeight newHeight: CGFloat) -> UIImage {
+    func scaledKeepingAspect(toHeight newHeight: CGFloat) -> UIImage {
         let newWidth = size.width*newHeight/size.height
         return scaled(toSize: CGSize(width: newWidth, height: newHeight))
     }

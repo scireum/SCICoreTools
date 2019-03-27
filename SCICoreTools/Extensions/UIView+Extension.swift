@@ -10,7 +10,7 @@ public enum LayoutAnchor {
 }
 
 public extension UIView {
-    public func hideKeyboardFromSuperViewWhenTappedAround() {
+    func hideKeyboardFromSuperViewWhenTappedAround() {
         let tabGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         tabGesture.cancelsTouchesInView = false
         self.addGestureRecognizer(tabGesture)
@@ -33,7 +33,7 @@ public extension UIView {
         }) as? [CAShapeLayer])?.first
     }
 
-    public func bezierPathBorder(_ color:UIColor = .white, width:CGFloat = 1) {
+    func bezierPathBorder(_ color:UIColor = .white, width:CGFloat = 1) {
 
         var border = self.bezierPathBorder
         let path = UIBezierPath(roundedRect: self.bounds, cornerRadius:self.layer.cornerRadius)
@@ -57,7 +57,7 @@ public extension UIView {
         border!.lineWidth = width * 2
     }
 
-    public func removeBezierPathBorder() {
+    func removeBezierPathBorder() {
         self.layer.mask = nil
         self.bezierPathBorder?.removeFromSuperlayer()
     }
@@ -65,7 +65,7 @@ public extension UIView {
 }
 
 public extension UIView {
-    public func setShadow(color: UIColor = .black, opacity: Float = 0.3, offSet: CGSize = .zero, radius: CGFloat = 10, scale: Bool = true) {
+    func setShadow(color: UIColor = .black, opacity: Float = 0.3, offSet: CGSize = .zero, radius: CGFloat = 10, scale: Bool = true) {
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOpacity = opacity
         self.layer.shadowOffset = offSet
@@ -83,7 +83,7 @@ public extension UIView {
      - parameters:
      - view: the view that gets embedded.
      */
-    public func embed(view: UIView, withConstant constant: CGFloat = 0) {
+    func embed(view: UIView, withConstant constant: CGFloat = 0) {
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         view.topAnchor.constraint(equalTo: self.topAnchor, constant: constant).isActive = true
@@ -92,7 +92,7 @@ public extension UIView {
         view.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -constant).isActive = true
     }
 
-    public func setConstraintsEqualTo(view: UIView) {
+    func setConstraintsEqualTo(view: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         self.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -100,7 +100,7 @@ public extension UIView {
         self.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 
-    public func setConstraintsEqualTo(view: UIView, forAnchorTypes anchorTypes: [LayoutAnchor]) {
+    func setConstraintsEqualTo(view: UIView, forAnchorTypes anchorTypes: [LayoutAnchor]) {
         self.translatesAutoresizingMaskIntoConstraints = false
         for anchor in anchorTypes {
             switch anchor {

@@ -45,7 +45,7 @@ public enum ModelName: String {
 public extension UIDevice {
 
     /// pares the deveice name as the standard name
-    public var modelName: ModelName {
+    var modelName: ModelName {
 
         #if targetEnvironment(simulator)
         let identifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"]!
