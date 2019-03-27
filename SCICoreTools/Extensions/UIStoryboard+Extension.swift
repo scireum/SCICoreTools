@@ -6,7 +6,7 @@ public extension UIStoryboard {
      Main storyboard for application.
      - Returns: Main storyboard.
      */
-    public static var main: UIStoryboard? {
+    static var main: UIStoryboard? {
         let bundle = Bundle.main
         guard let name = bundle.object(forInfoDictionaryKey: "UIMainStoryboardFile") as? String else { return nil }
         return UIStoryboard(name: name, bundle: bundle)
@@ -17,7 +17,7 @@ public extension UIStoryboard {
      - Parameter name: UIViewController type.
      - Returns: The view controller to specified class name.
      */
-    public func instantiateViewController<T: UIViewController>(withClass name: T.Type) -> T? {
+    func instantiateViewController<T: UIViewController>(withClass name: T.Type) -> T? {
         return instantiateViewController(withIdentifier: String(describing: name)) as? T
     }
 

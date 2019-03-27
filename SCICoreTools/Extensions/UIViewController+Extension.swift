@@ -8,7 +8,7 @@ public extension UIViewController {
      - title: The title of the alert.
      - message: The message of the alert.
      */
-    public func showSimpleAlert(title: String, message: String, completion: (()->())? = nil) {
+    func showSimpleAlert(title: String, message: String, completion: (()->())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertController, animated: true, completion: completion)
@@ -20,7 +20,7 @@ public extension UIViewController {
      - title: The title of the alert.
      - message: The message of the alert.
      */
-    public func showSimpleActionSheet(title: String, message: String, completion: (()->())? = nil) {
+    func showSimpleActionSheet(title: String, message: String, completion: (()->())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertController, animated: true, completion: completion)

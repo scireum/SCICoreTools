@@ -2,13 +2,13 @@ import UIKit
 
 private var pTouchAreaEdgeInsets: UIEdgeInsets = .zero
 
-public extension UIButton {
+extension UIButton {
 
     /**
      Helper var to increase touch area of a button
      Useage: button.touchAreaEdgeInsets = UIEdgeInsets(top: -16, left: -16, bottom: -16, right: -16)
      */
-    var touchAreaEdgeInsets: UIEdgeInsets {
+    public var touchAreaEdgeInsets: UIEdgeInsets {
         get {
             if let value = objc_getAssociatedObject(self, &pTouchAreaEdgeInsets) as? NSValue {
                 var edgeInsets: UIEdgeInsets = .zero
@@ -27,7 +27,7 @@ public extension UIButton {
         }
     }
 
-    open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+    override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         if (self.touchAreaEdgeInsets == .zero || !self.isEnabled || self.isHidden) {
             return super.point(inside: point, with: event)
         }
