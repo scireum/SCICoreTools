@@ -35,6 +35,9 @@ class ViewController: UIViewController {
         print("******")
         print("\(SCICoreTools.appName!) native \(SCICoreTools.deviceModel)".chainWithDashes())
         print(UIDevice.current.modelName)
+        self.navigationController?.pushViewController(self, animated: true, completion: {
+            print("test")
+        })
     }
 
     override func viewDidAppear(_ animated: Bool) {
