@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public enum LayoutAnchor {
     case top
@@ -91,6 +92,19 @@ public extension UIView {
         view.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -constant).isActive = true
         view.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -constant).isActive = true
     }
+
+    /**
+    Embed a view in another view matching centerAnchors of child to parent. Layouting is handled through autolayout.
+
+    - parameters:
+    - view: the view that gets embedded.
+    */
+   func centerEmbed(view: UIView, withConstant constant: CGFloat = 0) {
+       view.translatesAutoresizingMaskIntoConstraints = false
+       addSubview(view)
+       view.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: constant).isActive = true
+       view.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: constant).isActive = true
+   }
 
     func setConstraintsEqualTo(view: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
