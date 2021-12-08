@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 
         print("******")
         print("\(SCICoreTools.appName!) native \(SCICoreTools.deviceModel)".chainWithDashes())
-        print(UIDevice.current.modelName)
+        print(UIDevice.current.modelName.rawValue)
         self.navigationController?.pushViewController(self, animated: true, completion: {
             print("test")
         })
