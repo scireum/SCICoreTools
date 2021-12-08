@@ -72,6 +72,10 @@ public enum ModelName: String {
     case homePod
 
     case other
+
+    public var readableName: String {
+        return self.rawValue
+    }
 }
 
 public extension UIDevice {
