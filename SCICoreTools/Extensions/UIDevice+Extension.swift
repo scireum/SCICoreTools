@@ -1,4 +1,6 @@
 public enum ModelName: String {
+    case Simulator
+
     case iPodTouch5 = "iPod Touch (5th Gen)"
     case iPodTouch6 = "iPod Touch (6th Gen)"
     case iPodTouch7 = "iPod Touch (7th Gen)"
@@ -16,6 +18,7 @@ public enum ModelName: String {
     case iPhone7Plus = "iPhone 7 Plus"
     case iPhoneSE_1 = "iPhone SE (1st Gen)"
     case iPhoneSE_2 = "iPhone SE (2nd Gen)"
+    case iPhoneSE_3 = "iPhone SE (3rd Gen)"
     case iPhone8 = "iPhone 8"
     case iPhone8Plus = "iPhone 8 Plus"
     case iPhoneX = "iPhone X"
@@ -33,6 +36,14 @@ public enum ModelName: String {
     case iPhone13Pro = "iPhone 13 Pro"
     case iPhone13ProMax = "iPhone 13 Pro Max"
     case iPhone13Mini = "iPhone 13 mini"
+    case iPhone14 = "iPhone 14"
+    case iPhone14Plus = "iPhone 14 Plus"
+    case iPhone14Pro = "iPhone 14 Pro"
+    case iPhone14ProMax = "iPhone 14 Pro Max"
+    case iPhone15 = "iPhone 15"
+    case iPhone15Plus = "iPhone 15 Plus"
+    case iPhone15Pro = "iPhone 15 Pro"
+    case iPhone15ProMax = "iPhone 15 Pro Max"
 
     case iPad2 = "iPad 2"
     case iPad_3rdGen = "iPad (3rd Gen)"
@@ -42,11 +53,13 @@ public enum ModelName: String {
     case iPad_7thGen = "iPad (7th Gen)"
     case iPad_8thGen = "iPad (8th Gen)"
     case iPad_9thGen = "iPad (9th Gen)"
+    case iPad_10thGen = "iPad (10th Gen)"
 
     case iPadAir = "iPad Air"
     case iPadAir2 = "iPad Air 2"
     case iPadAir_3rdGen = "iPad Air (3rd Gen)"
     case iPadAir_4thGen = "iPad Air (4th Gen)"
+    case iPadAir_5thGen = "iPad Air (5th Gen)"
 
     case iPadMini = "iPad mini"
     case iPadMini2 = "iPad mini 2"
@@ -65,6 +78,8 @@ public enum ModelName: String {
     case iPadPro_4thGen_12_9Inch = "iPad Pro (4th Gen, 12.9 inch)"
     case iPadPro_5thGen_11Inch = "iPad Pro (5th Gen, 11 inch)"
     case iPadPro_5thGen_12_9Inch = "iPad Pro (5th Gen, 12.9 inch)"
+    case iPadPro_6thGen_11Inch = "iPad Pro (6th Gen, 11 inch)"
+    case iPadPro_6thGen_12_9Inch = "iPad Pro (6th Gen, 12.9 inch)"
 
     case appleTV_4thGen = "Apple TV (4th Gen)"
     case appleTV_5thGen = "Apple TV (5th Gen)"
@@ -97,6 +112,9 @@ public extension UIDevice {
 
         // see https://gist.github.com/adamawolf/3048717
         switch identifier {
+
+        case "i386", "x86_64", "arm64":
+            return .Simulator
 
         case "iPod5,1":
             return .iPodTouch5
@@ -165,6 +183,24 @@ public extension UIDevice {
             return .iPhone13Mini
         case "iPhone14,5":
             return .iPhone13
+        case "iPhone14,6":
+            return .iPhoneSE_3
+        case "iPhone14,7":
+            return .iPhone14
+        case "iPhone14,8":
+            return .iPhone14Plus
+        case "iPhone15,2":
+            return .iPhone14Pro
+        case "iPhone15,3":
+            return .iPhone14ProMax
+        case "iPhone15,4":
+            return .iPhone15
+        case "iPhone15,5":
+            return .iPhone15Plus
+        case "iPhone16,1":
+            return .iPhone15Pro
+        case "iPhone16,2":
+            return .iPhone15ProMax
 
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
             return .iPad2
@@ -222,6 +258,14 @@ public extension UIDevice {
             return .iPadPro_5thGen_11Inch
         case "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11":
             return .iPadPro_5thGen_12_9Inch
+        case "iPad13,16", "iPad13,17":
+            return .iPadAir_5thGen
+        case "iPad13,18", "iPad13,19":
+            return .iPad_10thGen
+        case "iPad14,3", "iPad14,4":
+            return .iPadPro_6thGen_11Inch
+        case "iPad14,5", "iPad14,6":
+            return .iPadPro_6thGen_12_9Inch
 
         case "AppleTV5,3":
             return .appleTV_4thGen
