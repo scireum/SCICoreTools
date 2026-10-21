@@ -1,3 +1,5 @@
+import UIKit
+
 public enum ModelName: String {
     case Simulator
 
