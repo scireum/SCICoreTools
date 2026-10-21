@@ -1,3 +1,5 @@
+import Foundation
+
 public struct Log {
     /**
      Logs the messages to the console with extra informations (filename, function and line number) on DEBUG mode
