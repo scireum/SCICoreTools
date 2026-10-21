@@ -44,6 +44,19 @@ public enum ModelName: String {
     case iPhone15Plus = "iPhone 15 Plus"
     case iPhone15Pro = "iPhone 15 Pro"
     case iPhone15ProMax = "iPhone 15 Pro Max"
+    case iPhone16 = "iPhone 16"
+    case iPhone16Plus = "iPhone 16 Plus"
+    case iPhone16Pro = "iPhone 16 Pro"
+    case iPhone16ProMax = "iPhone 16 Pro Max"
+    case iPhone16e = "iPhone 16e"
+    case iPhone17 = "iPhone 17"
+    case iPhone17Pro = "iPhone 17 Pro"
+    case iPhone17ProMax = "iPhone 17 Pro Max"
+    case iPhone17e = "iPhone 17e"
+    case iPhoneAir = "iPhone Air"
+    case iPhone18Pro = "iPhone 18 Pro"
+    case iPhone18ProMax = "iPhone 18 Pro Max"
+    case iPhoneDuo = "iPhone Duo"
 
     case iPad2 = "iPad 2"
     case iPad_3rdGen = "iPad (3rd Gen)"
@@ -54,12 +67,19 @@ public enum ModelName: String {
     case iPad_8thGen = "iPad (8th Gen)"
     case iPad_9thGen = "iPad (9th Gen)"
     case iPad_10thGen = "iPad (10th Gen)"
+    case iPad_A16 = "iPad (A16)"
 
     case iPadAir = "iPad Air"
     case iPadAir2 = "iPad Air 2"
     case iPadAir_3rdGen = "iPad Air (3rd Gen)"
     case iPadAir_4thGen = "iPad Air (4th Gen)"
     case iPadAir_5thGen = "iPad Air (5th Gen)"
+    case iPadAir_M2_11Inch = "iPad Air 11-inch (M2)"
+    case iPadAir_M2_13Inch = "iPad Air 13-inch (M2)"
+    case iPadAir_M3_11Inch = "iPad Air 11-inch (M3)"
+    case iPadAir_M3_13Inch = "iPad Air 13-inch (M3)"
+    case iPadAir_M4_11Inch = "iPad Air 11-inch (M4)"
+    case iPadAir_M4_13Inch = "iPad Air 13-inch (M4)"
 
     case iPadMini = "iPad mini"
     case iPadMini2 = "iPad mini 2"
@@ -67,6 +87,7 @@ public enum ModelName: String {
     case iPadMini4 = "iPad mini 4"
     case iPadMini_5thGen = "iPad mini (5th Gen)"
     case iPadMini_6thGen = "iPad mini (6th Gen)"
+    case iPadMini_A17Pro = "iPad mini (A17 Pro)"
 
     case iPadPro_1stGen_9_7Inch = "iPad Pro (1st Gen, 9.7 inch)"
     case iPadPro_1stGen_12_9Inch = "iPad Pro (1st Gen, 12.9 inch)"
@@ -80,6 +101,10 @@ public enum ModelName: String {
     case iPadPro_5thGen_12_9Inch = "iPad Pro (5th Gen, 12.9 inch)"
     case iPadPro_6thGen_11Inch = "iPad Pro (6th Gen, 11 inch)"
     case iPadPro_6thGen_12_9Inch = "iPad Pro (6th Gen, 12.9 inch)"
+    case iPadPro_M4_11Inch = "iPad Pro 11-inch (M4)"
+    case iPadPro_M4_13Inch = "iPad Pro 13-inch (M4)"
+    case iPadPro_M5_11Inch = "iPad Pro 11-inch (M5)"
+    case iPadPro_M5_13Inch = "iPad Pro 13-inch (M5)"
 
     case appleTV_4thGen = "Apple TV (4th Gen)"
     case appleTV_5thGen = "Apple TV (5th Gen)"
@@ -201,6 +226,32 @@ public extension UIDevice {
             return .iPhone15Pro
         case "iPhone16,2":
             return .iPhone15ProMax
+        case "iPhone17,1":
+            return .iPhone16Pro
+        case "iPhone17,2":
+            return .iPhone16ProMax
+        case "iPhone17,3":
+            return .iPhone16
+        case "iPhone17,4":
+            return .iPhone16Plus
+        case "iPhone17,5":
+            return .iPhone16e
+        case "iPhone18,1":
+            return .iPhone17Pro
+        case "iPhone18,2":
+            return .iPhone17ProMax
+        case "iPhone18,3":
+            return .iPhone17
+        case "iPhone18,4":
+            return .iPhoneAir
+        case "iPhone18,5":
+            return .iPhone17e
+        case "iPhone19,2":
+            return .iPhone18Pro
+        case "iPhone19,3":
+            return .iPhone18ProMax
+        case "iPhone19,4":
+            return .iPhoneDuo
 
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
             return .iPad2
@@ -266,6 +317,30 @@ public extension UIDevice {
             return .iPadPro_6thGen_11Inch
         case "iPad14,5", "iPad14,6":
             return .iPadPro_6thGen_12_9Inch
+        case "iPad14,8", "iPad14,9":
+            return .iPadAir_M2_11Inch
+        case "iPad14,10", "iPad14,11":
+            return .iPadAir_M2_13Inch
+        case "iPad15,3", "iPad15,4":
+            return .iPadAir_M3_11Inch
+        case "iPad15,5", "iPad15,6":
+            return .iPadAir_M3_13Inch
+        case "iPad15,7", "iPad15,8":
+            return .iPad_A16
+        case "iPad16,1", "iPad16,2":
+            return .iPadMini_A17Pro
+        case "iPad16,3", "iPad16,4":
+            return .iPadPro_M4_11Inch
+        case "iPad16,5", "iPad16,6":
+            return .iPadPro_M4_13Inch
+        case "iPad16,8", "iPad16,9":
+            return .iPadAir_M4_11Inch
+        case "iPad16,10", "iPad16,11":
+            return .iPadAir_M4_13Inch
+        case "iPad17,1", "iPad17,2":
+            return .iPadPro_M5_11Inch
+        case "iPad17,3", "iPad17,4":
+            return .iPadPro_M5_13Inch
 
         case "AppleTV5,3":
             return .appleTV_4thGen
