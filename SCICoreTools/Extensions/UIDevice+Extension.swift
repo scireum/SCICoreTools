@@ -30,7 +30,7 @@ public enum ModelName: String {
     case iPhone11ProMax = "iPhone 11 Pro Max"
     case iPhone12 = "iPhone 12"
     case iPhone12Pro = "iPhone 12 Pro"
-    case iPhone12ProMax = "iPhone Pro Max"
+    case iPhone12ProMax = "iPhone 12 Pro Max"
     case iPhone12Mini = "iPhone 12 mini"
     case iPhone13 = "iPhone 13"
     case iPhone13Pro = "iPhone 13 Pro"
